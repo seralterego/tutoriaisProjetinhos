@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background - Method 02</title>
+
+    <style type="text/css">
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      #bod {
+        background-size: 100%;
+        opacity: 0.8;
+      }
+
+      .bg1 {
+        background-image: url("../assets/img01.jpg");
+      }
+      .bg2 {
+        background-image: url("../assets/img02.jpg");
+      }
+      .bg3 {
+        background-image: url("../assets/img03.jpg");
+      }
+      .bg4 {
+        background-image: url("../assets/img04.jpg");
+      }
+      
+      .mainTitle {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 68px;
+        font-weight: bold;
+      }
+    </style>
+    <script type="text/javascript">
+      function backgr() {
+        var randimg = Math.floor(Math.random() * 4);
+        if (randimg == 0) {
+          document.getElementById('bod').className="bg1";
+        } else if (randimg == 1) {
+          document.getElementById('bod').className="bg2";
+        } else if (randimg == 2) {
+          document.getElementById('bod').className="bg3";
+        } else if (randimg == 3) {
+          document.getElementById('bod').className="bg4";
+        }
+      }
+    </script>
+  </head>
+  <body id="bod" onload="backgr()">
+    <div class="mainTitle">
+      <h1>Background Aleatório com JavaScript</h1>
+    </div>
+  </body>
+</html>

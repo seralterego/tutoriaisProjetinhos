@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Background - Method 01</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      width: 100vw;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-size: 100vw 100vh;
+    }
+    .mainTitle {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: #1a1b1a66;
+      border: 2px solid #fff;
+      width: 50%;
+      height: auto;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      color: #fff;
+    }
+
+  </style>
+  <!-- script Random Background -->
+  <script type="text/javascript">
+    function backgr(){
+      var backimg = [
+        "../assets/img01.jpg", 
+        "../assets/img02.jpg", 
+        "../assets/img03.jpg", 
+        "../assets/img04.jpg"
+      ]
+      var randimg = Math.floor(Math.random()*4);
+      document.body.background = backimg[randimg];
+    }
+  </script>
+</head>
+<body onload="backgr()">
+  <div class="mainTitle">
+    <h1>Fundo aleatório com JavaScript - Método 01</h1>
+  </div>
+</body>
+</html>
